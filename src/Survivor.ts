@@ -6,7 +6,6 @@ export class Survivor extends Character{
     private alive: boolean;
     private actions: string[];
     private equipment: string[];
-    public permittedEquipment: number;
     private static MAX_PERMITED_EQUIPMENT: number = 5;
     
     constructor(name : string) {
@@ -46,10 +45,10 @@ export class Survivor extends Character{
     }
 
     addEquipament(newEquipment : string ){
-        if(this.equipment.length < this.permittedEquipment){
+        if(this.equipment.length < Survivor.MAX_PERMITED_EQUIPMENT){
             this.equipment.push(newEquipment)
         } else {
-            return (`The maximum number of pieces of equipment is ${this.permittedEquipment}`);
+            return (`The maximum number of pieces of equipment is ${Survivor.MAX_PERMITED_EQUIPMENT}`);
         }
     }
     
