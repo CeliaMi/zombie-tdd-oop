@@ -14,11 +14,17 @@ describe('Survivor', () => {
          expect(sut).toBe(0);
     })
 
-    test('A Survivor who receives 2 Wounds should die', ()=> {
+    test('A survivor who receives 2 Wounds should die', ()=> {
         const survivor = new Survivor('juana')
         survivor.injure(2);
         const sut = survivor.alive
         expect(sut).toBe(false);
+    })
+
+    test('Each Survivor should start with the ability to perform 3 actions per shift', ()=> {
+        const survivor = new Survivor('juana')
+        const sut =survivor.actions.length
+        expect(sut).toBe(3);
     })
 
 })
