@@ -6,7 +6,7 @@ export class Survivor extends Character{
     private alive: boolean;
     private actions: string[];
     private equipment: string[];
-    private permittedEquipment: number;
+    public permittedEquipment: number;
     
     constructor(name : string) {
         super(name) 
@@ -16,6 +16,28 @@ export class Survivor extends Character{
         this.equipment = [];
         this.permittedEquipment = 5;
     }
+
+    public getWounds() {
+        return this.wounds;
+    }
+
+    public setWounds(wounds: number) {
+         this.wounds = wounds;
+    }
+
+    public getAlive() {
+        return this.alive;
+    }
+
+    public getActions() {
+        return this.actions;
+    }
+
+    public getEquipment() {
+        return this.equipment;
+    }
+
+    
 
     public injure(attack = 1) {
         this.wounds += attack;
