@@ -21,10 +21,18 @@ describe('Survivor', () => {
         expect(sut).toBe(false);
     })
 
-    test('Each Survivor should start with the ability to perform 3 actions per shift', ()=> {
+    test('Each survivor should start with the ability to perform 3 actions per shift', ()=> {
         const survivor = new Survivor('juana')
-        const sut =survivor.actions.length
+        const sut = survivor.actions.length
         expect(sut).toBe(3);
+    })
+
+    test('Each Survivor can carry up to 5 pieces of Equipment', ()=> {
+        const survivor = new Survivor('juana')
+        const EquipamentsToAdd = ['Baseball Bat', 'Flashlight', 'Gasoline', 'Axe', 'Pistol']
+         survivor.addEquipament(EquipamentsToAdd);
+         const sut = survivor.equipament.length
+        expect(sut).toBe(5);
     })
 
 })

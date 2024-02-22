@@ -1,4 +1,5 @@
 import { defaultActions } from "./helpers/defaultOptions";
+
 export class Survivor {
     public name: string;
     public wounds: number 
