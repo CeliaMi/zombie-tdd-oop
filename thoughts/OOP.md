@@ -5,10 +5,10 @@ Dentro de esta Kata podrás encontrar los 4 principios de programación Orientad
 
 ## 1 Abstracción
 
-En el planteamiento de las clases, estamos abstrayendo la idea de negocio o también llamado dominio, tenemos una clase personaje que deriva en dos Zombies y Supervivientes.
+La abstracción en OOP es el proceso por el cual conseguimos definir un tipo ( una clase) en el contexto que necesitamos, para poder hacer la abstracción hay que hacer lo que se conoce como el dominio "La Lógica del negocio" Encontrarás más acerca de este proceso que llevará después a la definición de mis clases en este archivo
 
 ## Herencia
-Tenemos una clase superior Character que hereda " extiende" a las inferiores Zombie y Survivor, en este caso solo tiene un atributo, pero es extensible al resto de cosas que tengan en común
+Tenemos una clase superior Character que hereda "extiende" a las inferiores Zombie y Survivor, en este caso solo tiene un atributo, pero es extensible al resto de cosas que tengan en común
 
 ``` JavaScript
  abstract class Character {
