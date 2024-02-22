@@ -14,4 +14,11 @@ describe('Survivor', () => {
          expect(sut).toBe(0);
     })
 
+    test('A Survivor who receives 2 Wounds should die', ()=> {
+        const survivor = new Survivor('juana')
+         survivor.injure(2);
+        const sut = survivor.alive
+        expect(sut).toBe(false);
+    })
+
 })
