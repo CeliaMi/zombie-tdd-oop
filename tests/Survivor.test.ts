@@ -30,8 +30,8 @@ describe('Survivor', () => {
     test('Each Survivor can carry up to 5 pieces of Equipment', ()=> {
         const survivor = new Survivor('juana')
         const EquipamentsToAdd = ['Baseball Bat', 'Flashlight', 'Gasoline', 'Axe', 'Pistol']
-         survivor.addEquipament(EquipamentsToAdd);
-         const sut = survivor.equipament.length
+        EquipamentsToAdd.forEach(equipament => survivor.addEquipament(equipament))
+        const sut = survivor.equipment.length
         expect(sut).toBe(5);
     })
 
