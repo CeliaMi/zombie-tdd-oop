@@ -2,11 +2,11 @@ import { defaultActions } from "./helpers/defaultOptions";
 import { Character } from "./Character";
 
 export class Survivor extends Character{
-    public wounds: number 
-    public alive: boolean;
-    public actions: string[];
-    public equipment: string[];
-    public permittedEquipment: number;
+    private wounds: number 
+    private alive: boolean;
+    private actions: string[];
+    private equipment: string[];
+    private permittedEquipment: number;
     
     constructor(name : string) {
         super(name) 
