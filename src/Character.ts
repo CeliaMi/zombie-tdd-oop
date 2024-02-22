@@ -4,6 +4,4 @@ export abstract class Character{
         this.name = name;
     }
     public abstract  greet(): string;
-
-    
 }
