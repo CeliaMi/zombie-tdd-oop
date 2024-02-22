@@ -57,12 +57,20 @@ Si tuviésemos que simplificarlo al máximo sería algo así:
 
 Con este esquema ya encontramos dos clases claramente, la clase historia de partida y la clase personaje que extiende a dos subclases, la clase Superviviente y la clase Zombie.
 
-La clases superviviente es la más compleja porque es sobre la que recae toda la acción del juego y el valor de sus atributos varia en función de la interacción con los zombies.
+Teniendo una visión general de todas las clases a plantear sería algo así. He utilizado una app de diagrama de sql para hacer este esquema, no es la mejor manera de hacerlo, para próximas veces es preferible otro tipo de sistema y añadir también los métodos.
+Cambiar de paradigma es todo un proceso mental y mi mente aún esta en otra parte...🙃
+
+![survivor-class.jpg](../thoughts/conceptual-schemes/general_schema_class.png)
+
+
+
+
+La clase superviviente es la más compleja porque es sobre la que recae toda la acción del juego y el valor de sus atributos varia en función de la interacción con los zombies.
 
 Si pensásemos en una partida modelo , lo primero sería crear el primer jugador que hará iniciar la partida, cuando creamos el primer jugador tendrá unos **valores por defecto**, que aplicados a una clase sería de la siguiente manera:
 
 ```jsx
-class Survival{
+class Survivor{
     constructor(name){
         this.name = name;
         this.wounds = 0
@@ -75,17 +83,16 @@ class Survival{
 			  this.permittedEquipment = 5;
     }
 
-module.exports = Survival;
 ```
 
-Las clases son capaces de crear objetos, podemos verlas como “plantillas” “moldes” para crear objetos en base a su estructura. Crear un nuevo objeto a partir de una clase es lo que se denomina instanciar, vamos a suponer que queremos crear una superviviente que se llama juanita, `const juanita = new Survival(’juanita’)` juanita es una instancia de la clase Survival
+Las clases son capaces de crear objetos, podemos verlas como “plantillas” “moldes” para crear objetos en base a su estructura. Crear un nuevo objeto a partir de una clase es lo que se denomina instanciar, vamos a suponer que queremos crear una superviviente que se llama juanita, `const juanita = new Survivor(’juanita’)` juanita es una instancia de la clase Survivor
 
 Bien ahora que ya conocemos nuestra nueva clase y vemos todos los atributos que la conforman tenemos que tener en cuenta que necesitamos que estos valores varíen entre sí en función de las diferentes interacciones que realice el superviviente,  esta capacidad de poder interaccionar, se la vamos a implementar a través de los métodos.
 
 los métodos son funciones dentro de nuestras clases y pueden realizar acciones y cambios sobre los valores de si misma.
 
 ```jsx
-class Survival{
+class Survivor{
     constructor(name){}
 
     injure(atackNumber){
@@ -142,7 +149,7 @@ class Survival{
         this.actions = this.actions.filter(e => e !== action);
     }
 
-module.exports = Survival;
+
 ```
 
-Lo que encontramos aquí es un planteamiento inicial en Js que más tarde refactorizaré dentro de mi proceso de desarrollo con TDD, para este proceso de abstración mientras hacemos el dominio no es necesario hacer una traducción tan literal al código, debería ser algo más esquematico sin tanto detalle
+Lo que encontramos aquí es un planteamiento inicial en Js que más tarde refactorizaré dentro de mi proceso de desarrollo con TDD, para este proceso de abstración mientras hacemos el dominio no es necesario hacer una traducción tan literal al código, debería ser algo más esquematico sin tanto detalle y dejando claro cuales serán los atributos y métodos de cada clase.
