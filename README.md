@@ -1,4 +1,4 @@
-# Kata zombie OPP + TDD
+# Kata zombie OOP + TDD
 
 
 ## Instalación👷‍♀️
