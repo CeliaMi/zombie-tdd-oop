@@ -43,4 +43,12 @@ describe('Survivor', () => {
         expect(sut).toBe(5);
     })
 
+    test('When a survivor tries to have more than 5 pieces of equipment, the program warns that it is not possible', ()=> {
+        const survivor = new Survivor('juana')
+        const EquipamentsToAdd = ['Baseball Bat', 'Flashlight', 'Gasoline', 'Axe', 'Pistol']
+        EquipamentsToAdd.forEach(equipament => survivor.addEquipament(equipament))
+        const sut = survivor.addEquipament('Knife')
+        expect(sut).toBe('The maximum number of pieces of equipment is 5');
+    })
+
 })

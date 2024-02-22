@@ -16,7 +16,7 @@ export class Survivor {
         this.equipment = [];
         this.permittedEquipment = 5;
     }
-    
+
     public injure(attack = 1) {
         this.wounds += attack;
         if (this.wounds >= 2) {
@@ -28,7 +28,7 @@ export class Survivor {
         if(this.equipment.length < this.permittedEquipment){
             this.equipment.push(newEquipment)
         } else {
-            console.log(`The maximum number of pieces of equipment is ${this.permittedEquipment}`);
+            return (`The maximum number of pieces of equipment is ${this.permittedEquipment}`);
         }
     }
     
