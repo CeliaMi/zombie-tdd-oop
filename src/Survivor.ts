@@ -1,7 +1,8 @@
 export class Survivor {
+    public name: string;
     
-    constructor() {
-  
-  }
+    constructor(name : string) {
+        this.name = name;
+    }
   
 }
