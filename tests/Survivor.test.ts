@@ -35,4 +35,12 @@ describe('Survivor', () => {
         expect(sut).toBe(5);
     })
 
+    test('Each Survivor can´t carry up more than 5 pieces of Equipment', ()=> {
+        const survivor = new Survivor('juana')
+        const EquipamentsToAdd = ['Baseball Bat', 'Flashlight', 'Gasoline', 'Axe', 'Pistol', 'Knife']
+        EquipamentsToAdd.forEach(equipament => survivor.addEquipament(equipament))
+        const sut = survivor.equipment.length
+        expect(sut).toBe(5);
+    })
+
 })
