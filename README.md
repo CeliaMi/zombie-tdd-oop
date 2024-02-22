@@ -10,9 +10,9 @@ Primero de todo vamos a realizar los pasos de instalación
 npm i
 ```
 La kata esta desarrollada implementando TDD **"Desarrollo guiado por pruebas"** primero testeamos y después desarrollamos, consiste en seguir los siguientes pasos:
-- 1️⃣Escribimos nuestros test 
-- 2️⃣Hacemos que fallen ( sin errores) 🔴 
-- 3️⃣Pasamos los test 🟢
+- 1️⃣ Escribimos nuestros test 
+- 2️⃣ Hacemos que fallen ( sin errores) 🔴 
+- 3️⃣ Pasamos los test 🟢
 - 4️⃣ refactorizamos nuestro código ✨
 
 ## Testeo🧪
