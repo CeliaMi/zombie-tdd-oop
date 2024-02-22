@@ -1,7 +1,7 @@
 
 ## Lógica del Juego
 
-Para poder empezar a desarrollar un programa es necesario hacer antes un proceso de abstracción para extraer la lógica de mi negocio y apartir de ella  plantear una estructura del código clara y ordenada. 
+Para poder empezar a desarrollar un programa es necesario hacer antes un proceso de abstracción para extraer la lógica de mi negocio y apartir de ella  plantear una estructura de código clara y ordenada. 
 
 La kata zombie, es un juego formado por partidas que tienen dos tipos de personajes, los zombies y los supervivientes, los jugadores serán los supervivientes.
 
