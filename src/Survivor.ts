@@ -1,7 +1,7 @@
 import { defaultActions } from "./helpers/defaultOptions";
+import { Character } from "./Character";
 
-export class Survivor {
-    public name: string;
+export class Survivor extends Character{
     public wounds: number 
     public alive: boolean;
     public actions: string[];
@@ -9,7 +9,7 @@ export class Survivor {
     public permittedEquipment: number;
     
     constructor(name : string) {
-        this.name = name;
+        super(name) 
         this.wounds = 0;
         this.alive = true;
         this.actions = defaultActions;
