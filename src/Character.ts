@@ -3,4 +3,7 @@ export abstract class Character{
     constructor(name : string) {
         this.name = name;
     }
+    public abstract  greet(): string;
+
+    
 }

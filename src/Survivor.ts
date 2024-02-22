@@ -51,5 +51,9 @@ export class Survivor extends Character{
             return (`The maximum number of pieces of equipment is ${Survivor.MAX_PERMITED_EQUIPMENT}`);
         }
     }
+
+    public greet(): string {
+        return `Hello, my name is ${this.name}, i'm a survivor.`;
+    }
     
 }
