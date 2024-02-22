@@ -10,7 +10,7 @@ En el planteamiento de las clases, estamos abstrayendo la idea de negocio o tamb
 ## Herencia
 Tenemos una clase superior Character que hereda " extiende" a las inferiores Zombie y Survivor, en este caso solo tiene un atributo, pero es extensible al resto de cosas que tengan en común
 
-``` Bash
+``` JavaScript
  abstract class Character {
      name: string;
     constructor(name : string) {
@@ -29,7 +29,7 @@ Tenemos una clase superior Character que hereda " extiende" a las inferiores Zom
 
 Podemos encontrar el encapsulamiento en los atributos privados de la clase survivor que podemos acceder a ellos solo a partir de sus métodos get y set 
 
-``` Bash
+``` JavaScript
  class Survivor extends Character{
     private wounds: number 
     constructor() {
@@ -52,3 +52,22 @@ Podemos encontrar el encapsulamiento en los atributos privados de la clase survi
 ## Poliformismo
 Este principio lo vemos aplicado en este proyecto a través de polimorfismo por herencia, la misma función tendrá compartamientos diferentes dependiendo de su clase
 
+
+
+``` JavaScript
+
+abstract class Character{
+
+     public abstract  greet(): string;
+ 
+}
+
+class Survivor extends Character{
+    public greet(): string {
+        return `Hello, my name is ${this.name}, i'm a survivor.`;
+    }
+}
+
+
+
+```
