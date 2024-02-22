@@ -1,4 +1,7 @@
 export class Survivor {
-  constructor() {}
+    
+    constructor() {
+  
+  }
   
 }
