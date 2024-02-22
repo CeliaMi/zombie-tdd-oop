@@ -1,19 +1,29 @@
 # Kata zombie OOP + TDD
 
+Bienvenido a este proyecto, aquí encontrarás un primer planteamiento de una kata de un juego de zombies planteada para la aplicación de la programación orientada a objetos.
+
+Primero de todo vamos a realizar los pasos de instalación
 
 ## Instalación👷‍♀️
 
 ``` Bash
 npm i
 ```
+La kata esta desarrollada implementando TDD **"Desarrollo guiado por pruebas"** primero testeamos y después desarrollamos, consiste en seguir los siguientes pasos:
+- 1️⃣Escribimos nuestros test 
+- 2️⃣Hacemos que fallen ( sin errores) 🔴 
+- 3️⃣Pasamos los test 🟢
+- 4️⃣ refactorizamos nuestro código ✨
 
-## Pasar los test🧪
+## Testeo🧪
 
 ``` Bash
 npm run test
 ```
 
-## El proceso de trabajo y aplicación de OPP
+En este repo también encontrarás..
+
+## El proceso de trabajo y aplicación de OOP
 
 Encontrarás toda la info necesaria para comprender esta Kata dentro de los archivos 
 
