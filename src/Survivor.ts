@@ -7,6 +7,7 @@ export class Survivor extends Character{
     private actions: string[];
     private equipment: string[];
     public permittedEquipment: number;
+    private static MAX_PERMITED_EQUIPMENT: number = 5;
     
     constructor(name : string) {
         super(name) 
@@ -14,7 +15,6 @@ export class Survivor extends Character{
         this.alive = true;
         this.actions = defaultActions;
         this.equipment = [];
-        this.permittedEquipment = 5;
     }
 
     public getWounds() {
@@ -37,7 +37,6 @@ export class Survivor extends Character{
         return this.equipment;
     }
 
-    
 
     public injure(attack = 1) {
         this.wounds += attack;
