@@ -72,7 +72,7 @@ También encontrarás encapsulamiento con la palabra reservada static
     
 ```
 
-## 4 Poliformismo
+## 4 Polimorfismo
 Este principio lo vemos aplicado en este proyecto a través de polimorfismo por herencia, la misma función tendrá compartamientos diferentes dependiendo de su clase
 
 
